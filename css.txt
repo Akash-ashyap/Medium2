@@ -1,0 +1,173 @@
+Css(Casacading Style sheet)
+
+Boilerplate of css
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+->Above is the bolierplate of css.
+
+There are basically three types of Selector:
+>Tag Selector:
+h1{
+    color: antiquewhite;
+}
+We directly write properties to the tag.
+>class selector:
+.box{
+    color: aqua;
+}
+id Selector:
+#box{
+    color: aliceblue;
+}
+
+Types of measuremnt:
+
+There are differnt types of measurement:
+.Pixel is static so we dont use as it is not adjustable according to screens. 
+.Percentage%- is mainly used for the box model.
+.Vmax both are used for the responsive website. (view maxm height or width of the screen.)
+.vmin is also used for responsive website.(minm width or height if the screen.)
+.vh,vw
+
+*Typography:
+
+Typography means variation we can bring change in the font.
+.Font size : Means size of the font.
+.Font weight: Means the Font will be thin or Thick.(100 to 900).
+.Font Family: Means which type of 
+.Letter spacing: means the space betwwen the letter.
+.Line height: Means the Space between the Sentences.
+.Text Align: Means the words will be right,left or Center.
+.color: Type of colors to the text.
+
+
+Box Model:
+
+.Div is an conatiner tag that keeps Elemnts inside.   
+<div class="main">
+        <h1>Lorem ipsum dolor sit amet consectetur </h1>
+    </div>
+.main{
+    width: 40%;
+    height: 40%;
+    background-color: red;
+}
+conatiner tag have differnt properties:
+Background image :The image applied to image.
+background-image: url();
+To adjust the image we have to apply four properties :
+Background repeat:No repeat 
+Background-position:Center
+Background-size:cover
+Margin:Applied to the outer to the box.
+padding: Applies inside a box to adjust the text.
+
+Position Absolute:
+It is applied to the box to take away from one place to another without distrubing the position of other object.
+It has three properties:
+top:50%;
+left:50%;
+Top and left are used to adjust the box at center but not according to the screen.
+Transform:Translate(-50%,-50%);
+Transform and translate are used to match the center from the screen to adjust in between. 
+Transfrom never leaves the position .
+Transform:rotate :Rotate the box
+Tranform:Skew: Zoom in Zoom out
+Transform:Scale: Parllogram type
+
+Flex-box:
+It works on x and y axis.
+Main axis is row and opposite is known as cross axis.
+cross axis conatins :
+Align items:Flex start, flex End, Flex Center
+Always applied to the parents box.
+Main axis conatins
+diplay-flex;
+Flex Direction:Row reverse,column Reverse
+By default flex dirction is row wise.
+Justify conetnt:Flex start,Flex center,Flex End
+Justify:Space around,space between,space evenly
+Flex wrap : wrap(means no space is between the box)
+
+eg:Display:flex;
+justify-content:space-between;
+text align:center;
+
+Hover and Tansistion:
+Transition:Time,delay,for which property.
+Has four prperties ease all,ease out,ease in out,linear
+cubic beizer is the site for all the box.
+Hover
+what should be done when the cursor goes on the box.
+
+.red {
+    background-color: rgb(230, 90, 90);
+    /* transform: translate(-50%, -50%); */
+    /* transform: rotate(50deg) translate(100px,0); */
+    /* transform: rotate(-50deg); */
+    /* transform: scale(2); */
+    /* transform: skew(10deg, 30deg); */
+    transform: rotate(0deg);
+    /* transition: time delay timingfunction forwhichproperty; */
+    /* transition: 3s cubic-bezier(0.04, 1.5, 0.76, -0.69) all; */
+    transition: 3s linear background-color, 1s linear transform;
+}
+
+.red:hover {
+    transform: rotate(45deg);
+    background-color: green;
+}
+
+.green {
+    background-color: rgb(54, 179, 54);
+}
+
+Animation:
+There are mainly two types of animations:
+i.percentage
+0%{
+left:40%
+}
+100%{
+left:80
+}
+
+ii.From - to
+@keyframes run{
+from{
+left:0
+}
+to{
+left:40%
+}
+
+eg:
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+
+Different properties of animattion:
+Animation name
+Animation Delay
+Animation fill mode
+Animation iteration count
+Animation Direction
+
+Media queries:
+It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+It is just same as css whatever the size and properties we add to css same size we give in media
+queries.
+media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
